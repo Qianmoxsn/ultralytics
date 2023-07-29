@@ -35,10 +35,17 @@ seaborn>=0.11.0
 # openvino-dev>=2023.0  # OpenVINO export
 
 # Extras --------------------------------------
-psutil  # system utilization
+psutil~=5.9.5
 py-cpuinfo  # display CPU info
 # thop>=0.1.1  # FLOPs computation
 # ipython  # interactive notebook
 # albumentations>=1.0.3  # training augmentations
 # pycocotools>=2.0.6  # COCO mAP
 # roboflow
+
+# Development ---------------------------------
+numpy>=1.25.1
+torch~=2.1.0.dev20230624+cu121
+torchvision~=0.16.0.dev20230625+cu121
+gradio>=3.35.2
+setuptools>=65.5.1

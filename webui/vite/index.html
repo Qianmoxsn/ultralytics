@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style src="/style.css"></style>
+    <title>YOLO vite interface</title>
+</head>
+
+<body>
+<div id="title">
+    <h1>YOLO vite interface</h1>
+</div>
+<div id="app">
+    <div>select-model</div>
+    <div>Confidence</div>
+    <div class="image-container">rawImage
+        <img src="javascript.svg" alt="Here shows your input image">
+    </div>
+    <div class="image-container">resultImage
+        <img src="javascript.svg" alt="Here shows the result of prediction">
+    </div>
+</div>
+<script type="module" src="/main.js"></script>
+</body>
+
 </html>

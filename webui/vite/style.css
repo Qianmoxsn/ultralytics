@@ -82,6 +82,14 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.image-container image{
+  justify-content: center;
+  align-items: center;
+  border: #646cff 2px solid;
+    border-radius: 8px;
+
+
+}
 
 @media (prefers-color-scheme: light) {
   :root {

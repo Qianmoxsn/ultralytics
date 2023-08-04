@@ -49,3 +49,5 @@ torch~=2.1.0.dev20230624+cu121
 torchvision~=0.16.0.dev20230625+cu121
 gradio>=3.35.2
 setuptools>=65.5.1
+# Server --------------------------------------
+fastapi>=0.100.1

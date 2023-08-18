@@ -1,0 +1,63 @@
+/* 样式设置 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.sub-header {
+  background-color: #555;
+  color: white;
+  padding: 5px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image-upload {
+  margin-bottom: 20px;
+}
+
+.image-display {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.result-area {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.confidence-slider {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.log-area {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f5f5f5;
+  max-height: 150px;
+  overflow: auto;
+}
+
+#boundingCanvas {
+  position: absolute;
+  /* 绝对定位，使canvas元素覆盖在img元素上方 */
+  /* 防止canvas元素干扰鼠标事件 */
+  /* pointer-events: none; */
+  z-index: 1;
+  border: 2px solid rgb(223, 124, 37);
+  border-radius: 10px;
+}

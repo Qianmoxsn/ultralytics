@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>图像识别前端页面</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="header">
+    <h1>图像识别前端页面</h1>
+  </div>
+  <div class="sub-header">
+    <h2>图像上传与展示</h2>
+  </div>
+  <div class="container">
+    <div class="image-upload">
+      <input type="file" id="imageInput" accept="image/*" />
+    </div>
+    <div class="image-display">
+      <img id="uploadedImage" src="#" alt="Uploaded Image" style="max-width: 100%" />
+    </div>
+  </div>
+  <div class="sub-header">
+    <h2>图像结果与绘制</h2>
+  </div>
+  <div class="container">
+    <div class="result-area">
+      <h3>识别结果:</h3>
+      <div class="image-display">
+        <img id="resultImage" src="#" alt="Result Image" style="max-width: 100%" />
+        <canvas id="boundingCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="sub-header">
+    <h2>置信度调节</h2>
+  </div>
+  <div class="container">
+    <input type="range" id="confidenceSlider" class="confidence-slider" min="0" max="100" value="50" />
+  </div>
+  <div class="sub-header">
+    <h2>日志输出</h2>
+  </div>
+  <div class="container">
+    <div class="log-area" id="logOutput"></div>
+  </div>
+  <!-- JavaScript 代码 -->
+  <script src="main.js"></script>
+</body>
+
+</html>

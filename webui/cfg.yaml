@@ -1,0 +1,59 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# Default training settings and hyperparameters for medium-augmentation COCO training
+
+task: detect  # (str) YOLO task, i.e. detect, segment, classify, pose
+mode: predict  # (str) YOLO mode, i.e. train, val, predict, export, track, benchmark
+
+# 预测设置 --------------------------------------------------------------------------------------------------
+source:  # (str, 可选) 图像或视频的源目录
+show: False  # (bool) 如果可能的话显示结果
+save_txt: False  # (bool) 将结果保存为 .txt 文件
+save_conf: False  # (bool) 保存带有置信度分数的结果
+save_crop: False  # (bool) 保存带有结果的裁剪图像
+show_labels: True  # (bool) 在绘图中显示目标标签
+show_conf: True  # (bool) 在绘图中显示目标置信度分数
+vid_stride: 1  # (int) 视频帧率步长
+line_width:   # (int, 可选) 边界框的线宽，如果缺失则自动计算
+visualize: False  # (bool) 可视化模型特征
+augment: False  # (bool) 对预测源应用图像增强
+agnostic_nms: False  # (bool) 使用类别无关的 NMS（非极大值抑制）
+classes:  # (int | list[int], 可选) 按类别过滤结果，例如 class=0，或 class=[0,2,3]
+retina_masks: False  # (bool) 使用高分辨率分割掩模
+boxes: True  # (bool) 在分割预测中显示边界框
+
+
+
+# Hyperparameters ------------------------------------------------------------------------------------------------------
+lr0: 0.01  # (float) initial learning rate (i.e. SGD=1E-2, Adam=1E-3)
+lrf: 0.01  # (float) final learning rate (lr0 * lrf)
+momentum: 0.937  # (float) SGD momentum/Adam beta1
+weight_decay: 0.0005  # (float) optimizer weight decay 5e-4
+warmup_epochs: 3.0  # (float) warmup epochs (fractions ok)
+warmup_momentum: 0.8  # (float) warmup initial momentum
+warmup_bias_lr: 0.1  # (float) warmup initial bias lr
+box: 7.5  # (float) box loss gain
+cls: 0.5  # (float) cls loss gain (scale with pixels)
+dfl: 1.5  # (float) dfl loss gain
+pose: 12.0  # (float) pose loss gain
+kobj: 1.0  # (float) keypoint obj loss gain
+label_smoothing: 0.0  # (float) label smoothing (fraction)
+nbs: 64  # (int) nominal batch size
+hsv_h: 0.015  # (float) image HSV-Hue augmentation (fraction)
+hsv_s: 0.7  # (float) image HSV-Saturation augmentation (fraction)
+hsv_v: 0.4  # (float) image HSV-Value augmentation (fraction)
+degrees: 0.0  # (float) image rotation (+/- deg)
+translate: 0.1  # (float) image translation (+/- fraction)
+scale: 0.5  # (float) image scale (+/- gain)
+shear: 0.0  # (float) image shear (+/- deg)
+perspective: 0.0  # (float) image perspective (+/- fraction), range 0-0.001
+flipud: 0.0  # (float) image flip up-down (probability)
+fliplr: 0.5  # (float) image flip left-right (probability)
+mosaic: 1.0  # (float) image mosaic (probability)
+mixup: 0.0  # (float) image mixup (probability)
+copy_paste: 0.0  # (float) segment copy-paste (probability)
+
+# Custom config.yaml ---------------------------------------------------------------------------------------------------
+cfg:  # (str, optional) for overriding defaults.yaml
+
+# Tracker settings ------------------------------------------------------------------------------------------------------
+tracker: botsort.yaml  # (str) tracker type, choices=[botsort.yaml, bytetrack.yaml]
